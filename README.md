@@ -67,7 +67,7 @@ Movies already in the watchlist are not re-recommended.
 
 ## 🧑‍💻 Author
 
-Zakir (Feel free to modify this with your actual name or GitHub link)
+Jakir Hussain
 
 ## 📜 License
 
