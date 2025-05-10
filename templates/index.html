@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-film"></i> Movie Recommendation System</h1>
+        
+        <!-- Search bar with autocomplete -->
+        <input type="text" id="search-bar" placeholder="Search movies..." oninput="searchMovies()">
+        
+        <h1 id="searchingAnime"></h1>
+
+        <!-- Genre buttons -->
+        <div id="genre-buttons">
+            <button onclick="filterByGenre('Action' , this)" , class = "genre-button">Action</button>
+            <button onclick="filterByGenre('Adventure' , this)" , class = "genre-button">Adventure</button>
+            <button onclick="filterByGenre('Animation' , this)" , class = "genre-button">Animation</button>
+            <button onclick="filterByGenre('Biography' , this)" , class = "genre-button">Biography</button>
+            <button onclick="filterByGenre('Comedy' , this)" , class = "genre-button">Comedy</button>
+            <button onclick="filterByGenre('Crime' , this)" , class = "genre-button">Crime</button>
+            <button onclick="filterByGenre('Drama' , this)" , class = "genre-button">Drama</button>
+            <button onclick="filterByGenre('Family' , this)" , class = "genre-button">Family</button>
+            <button onclick="filterByGenre('Fantasy' , this)" , class = "genre-button">Fantasy</button>
+            <button onclick="filterByGenre('History' , this)" , class = "genre-button">History</button>
+            <button onclick="filterByGenre('Horror' , this)" , class = "genre-button">Horror</button>
+            <button onclick="filterByGenre('Music' , this)" , class = "genre-button">Music</button>
+            <button onclick="filterByGenre('Musical' , this)" , class = "genre-button">Musical</button>
+            <button onclick="filterByGenre('Mystery' , this)" , class = "genre-button">Mystery</button>
+            <button onclick="filterByGenre('Romance' , this)" , class = "genre-button">Romance</button>
+            <button onclick="filterByGenre('Sci-Fi' , this)" , class = "genre-button">Sci-Fi</button>
+            <button onclick="filterByGenre('Sport' , this)" , class = "genre-button">Sport</button>
+            <button onclick="filterByGenre('Thriller' , this)" , class = "genre-button">Thriller</button>
+            <button onclick="filterByGenre('War' , this)" , class = "genre-button">War</button>
+            <button onclick="filterByGenre('Western' , this)" , class = "genre-button">Western</button>
+        </div>
+
+        
+
+        <!-- Personalized recommendations button -->
+        <div id="feature-buttons-div">
+            <button onclick="getRecommendations(this)" class ="feature-button">Personalized Recommendation</button>
+            <button class ="feature-button" onclick="toggleWatchlist(this)">Show Watch list</button>
+        </div>
+        <!-- Movie Cards -->
+        <div id="movie-container">
+         
+            <!-- Movie cards will appear here -->
+        </div>
+        <!-- Watchlist -->
+        
+        <div id="watchlist">
+
+        
+            <!-- Watchlist will be populated here -->
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</body>
+</html>
